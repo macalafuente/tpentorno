@@ -1,0 +1,22 @@
+--2023-06-16 21:20:10--  https://source.unsplash.com/random/900%C3%97700/?person
+Resolviendo source.unsplash.com (source.unsplash.com)... 52.20.78.240, 3.232.242.170, 3.220.57.224, ...
+Conectando con source.unsplash.com (source.unsplash.com)[52.20.78.240]:443... conectado.
+Petición HTTP enviada, esperando respuesta... 302 Found
+Ubicación: https://images.unsplash.com/photo-1554727242-741c14fa561c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8cGVyc29ufHx8fHx8MTY4Njk2MTIxMA&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1080 [siguiente]
+--2023-06-16 21:20:10--  https://images.unsplash.com/photo-1554727242-741c14fa561c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8cGVyc29ufHx8fHx8MTY4Njk2MTIxMA&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1080
+Resolviendo images.unsplash.com (images.unsplash.com)... 146.75.126.208, 2a04:4e42:8f::720
+Conectando con images.unsplash.com (images.unsplash.com)[146.75.126.208]:443... conectado.
+Petición HTTP enviada, esperando respuesta... 200 OK
+Longitud: 307495 (300K) [image/jpeg]
+Guardando como: “index.html?person.3”
+
+     0K .......... .......... .......... .......... .......... 16%  297K 1s
+    50K .......... .......... .......... .......... .......... 33%  415K 1s
+   100K .......... .......... .......... .......... .......... 49% 1,36M 0s
+   150K .......... .......... .......... .......... .......... 66% 1,98M 0s
+   200K .......... .......... .......... .......... .......... 83%  642K 0s
+   250K .......... .......... .......... .......... .......... 99% 2,50M 0s
+   300K                                                       100%  549G=0,4s
+
+2023-06-16 21:20:11 (673 KB/s) - “index.html?person.3” guardado [307495/307495]
+
