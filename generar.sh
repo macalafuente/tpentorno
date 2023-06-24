@@ -9,11 +9,19 @@
 
 arg_1=$1
 
+  
+#
+#
+
 nombres="https://raw.githubusercontent.com/fernandezpablo85/name_suggestions/master/assets/dict.csv"
 imagenes="https://source.unsplash.com/random/900%C3%97700/?person"
 
-wget $imagenes -o imagen1.jpeg
+wget $imagenes -O imagen1.jpeg
+wget $nombres -O dict.csv 
 
-nuevo_nombre=$nombres
+lista=$(wc -l dict.csv)
+num_random=$(($RANDOM % $lista))
+nombre_random=(sed '$num_randomq;d' dict.csv)
+
 
 mv imagen1.jpeg $nuevo_nombre.jpg
