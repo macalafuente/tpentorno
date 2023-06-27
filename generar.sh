@@ -13,15 +13,25 @@ arg_1=$1
 #
 #
 
-nombres="https://raw.githubusercontent.com/fernandezpablo85/name_suggestions/master/assets/dict.csv"
+nombres="https://raw.githubusercontent.com/adalessandro/EdP-2023-TP-Final/main/dict.csv"
 imagenes="https://source.unsplash.com/random/900%C3%97700/?person"
+
+
 
 wget $imagenes -O imagen1.jpeg
 wget $nombres -O dict.csv 
 
 lista=$(wc -l dict.csv)
-num_random=$(($RANDOM % $lista))
-nombre_random=(sed '$num_randomq;d' dict.csv)
+#num_random=$(($RANDOM % $lista))
+#nombre_random=(sed '$num_randomq;d' dict.csv)
+
+for i in range($arg_1); do
+       num_random=$(($RANDOM % $lista))
+       nombre_random=(sed '$num_randomq;d' dict.csv)
+       wget $imagenes -O $nombre_random.jpeg
+       sleep 1 
+done 
 
 
-mv imagen1.jpeg $nuevo_nombre.jpg
+
+#mv imagen1.jpeg $nuevo_nombre.jpg
