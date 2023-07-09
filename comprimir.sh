@@ -1,30 +1,43 @@
 #!/bin/bash
-#Una vez procesadas las imágenes se debe generar un
-#archivo con la lista de todas las personas, un total de personas femeninas
-#y masculinas; y luego comprimir todo en un solo archivo. Entiéndase por
-#persona femenina aquella cuya ultima letra del primer nombre es una letra
-#“a”. El archivo generado debe poder accederse fuera del contenedor.
+#comprimir.sh: Finalmente, luego de procesadas las imágenes, se debe:
+#– generar un archivo con la lista de nombres de todas las imágenes.
+#– generar un archivo con la lista de nombres válidos.
+#– generar un archivo con el total de personas cuyo nombre finaliza con
+#la letra a.
+#– por último, generar un archivo comprimido que incluya los archivos
+#generados en los items anteriores y todas las imágenes. El archivo
+#comprimido debe poder accederse desde fuera del contenedor.
 
 #GENERAR UN ARCHIVO CON LA LISTA DE NOMBRES DE TODAS LAS IMAGENES
+arg1=$1
+mkdir -p imag_comprimir
 
-touch nombre_archivos.txt
+for f in $(ls *); do
+${f%.*}	>> nom_imag.txt
+cp f ~/imag_comprimir 
+done
 
 #GEnerar un archivo con la lista de nombres validos
 
-touch nombres_validos.txt
-
+for i in $(ls *); do
+if [[ ${f%.*}  =~ [A-Z][a-z]+ ]]; then
+	${f%.*} >> nom_val_imag.txt
+fi
 #generar archivo con  total de personas que el nombre finaliza con la letra
 #A
-touch nombres_con_A.txt
-contador=0
-for name in $(cat nombres_validos.txt); do
-if [[name == *a]]; then
-$contador+=1 #Como agregar nums a contador?
+
+#contador=0
+for f in $(ls *); do
+if [[ ${f%.*} =~ *a ]]; then
+${f%.*} >> nom_A_imag.txt
+#$contador+=1 #Como agregar nums a contador?
 fi
 done
 
- $(cat contador) > nombres_con_A.txt
-
  #COMPRIMIR
 
- tar #Como descomprimir ? 
+ mv nom_imag.txt imag_comprimir
+ mv nom_val_imag.txt imag_comprimir
+ mv nom_A_imag.txt imag_comprimir
+
+tar zcvf comprimido.tar.gz imag_comprimir 
