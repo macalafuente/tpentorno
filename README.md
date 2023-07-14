@@ -11,7 +11,7 @@
 ### Comando: docker build . -t tpentorno
 
 ## 2) Correr la imagen creada de modo interactivo para poder acceder al menu: 
-### Comando: docker run -it -v ./datasets:/app/datasets tpentorno 
+### Comando: docker run -it -v datasets:/app/datasets tpentorno 
 
 ## 3) El menu mostrara las diferentes opciones de scripts a ejecutar (Deben ejecutarse en el orden planteado para su correcto funcionamiento)
 ### 1º generar
