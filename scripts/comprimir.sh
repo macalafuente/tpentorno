@@ -27,5 +27,6 @@ for f in $(ls *.jpeg); do
 done
 
 #COMPRIMIR
-cd ../
+cd ../ 
 tar zcvf comprimido.tar.gz dir_imagenes 
+mv comprimido.tar.gz datasets 
