@@ -8,7 +8,7 @@
 
 ## Instrucciones para correr el contenedor alojado en este repositorio: 
 
-### 1) Primero construir la imagen de Docker relativa al contenedor del trabajo
+### 1) Construir la imagen de Docker relativa al contenedor del trabajo
 #### Comando: docker build . -t tpentorno
 
 ### 2) Correr la imagen creada de modo interactivo para poder acceder al menú: 
