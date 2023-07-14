@@ -9,19 +9,12 @@
 
 arg_1=$1
 
-  
-#
-#
-
 nombres="https://raw.githubusercontent.com/adalessandro/EdP-2023-TP-Final/main/dict.csv"
 link_imagenes="https://source.unsplash.com/random/900%C3%97700/?person"
-
 
 wget $nombres -O dict.csv 
 
 lista=$(cat dict.csv | wc -l)
-#num_random=$(($RANDOM % $lista))
-#nombre_random=(sed '$num_randomq;d' dict.csv)
 
 mkdir dir_imagenes 
 

@@ -17,7 +17,6 @@ echo $verif_sm
 if [[ $verif  == $verif_sm ]]; then
        echo "Archivo descomprimido"
        tar xvf $imag_comp
-
 else
 	echo "No se puede descomprimir. No coinciden las sumas de verificaciòn"
 fi	
